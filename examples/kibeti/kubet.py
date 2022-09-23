@@ -28,13 +28,13 @@ def update_bot():
 
 def chat():
     while True:
-        message = input("Me : ")
-        response = sarufi.chat(project_id=5, chat_id="furaha", message=message)
+        message = input("Me: ")
+        response = sarufi.chat(bot_id=5, chat_id="furaha", message=message)
         print(f"Bot: {response}")
 
 
 def respond(message, chat_id):
-    response = sarufi.chat(project_id=5, chat_id=chat_id, message=message)
+    response = sarufi.chat(bot_id=5, chat_id=chat_id, message=message)
     return response.get("message")
 
 

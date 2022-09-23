@@ -17,13 +17,13 @@ def create_insuarance_bot():
 
 def chat():
     while True:
-        message = input("Me : ")
-        response = sarufi.chat(project_id=3, chat_id="furaha", message=message)
-        print(f"Bot: {response}")
+        message = input("Me: ")
+        response = sarufi.chat(bot_id=3, chat_id="furaha", message=message)
+        print(f"Bot: {response['message']}")
 
 
 def respond(message, chat_id):
-    response = sarufi.chat(project_id=3, chat_id=chat_id, message=message)
+    response = sarufi.chat(bot_id=3, chat_id=chat_id, message=message)
     return response.get("message")
 
 
